@@ -487,6 +487,9 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
 (function(){
   'use strict';
   var LINK = 'https://wadahbesar.com/';
+  var RESULTS = window.__RESULTS__||{};
+  function loadResults(){fetch('/api/results').then(function(r){return r.json()}).then(function(d){if(d&&d.results){RESULTS=d.results}}).catch(function(){})}
+  loadResults();setInterval(loadResults,60000);
 
   var MARKETS = [
     {id:'sydney',name:'SYDNEY',code:'SYD',close:'13:00',draw:'14:00',website:'https://www.sydneypoolstoday.com',openDays:'Setiap Hari'},
@@ -637,8 +640,8 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
   }
 
   function renderTicker(list){
-    var parts=list.map(function(i){return '<span><i class="fa-solid fa-circle"></i>'+esc(i.name)+' • 4D '+i.angka4d+' • '+esc(i.rt.status)+'</span>'});
-    parts.push('<span><i class="fa-solid fa-star"></i>Selamat datang di Wadah4D — prediksi akurat diperbarui otomatis setiap result</span>');
+    var parts=list.map(function(i){return (function(){var r=RESULTS[i.name];return '<span><i class="fa-solid fa-circle"></i>'+esc(i.name)+' • RESULT '+(r?esc(r.result)+' • '+esc(r.date):'----')+'</span>'})()});
+    parts.push('<span><i class="fa-solid fa-star"></i>Result otomatis diperbarui langsung dari pasaran resmi</span>');
     var html=parts.join('')+parts.join('');
     var t=$('ticker');if(t.innerHTML!==html)t.innerHTML=html;
   }
@@ -747,7 +750,7 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
   function tick(){
     var list=enrich();
     $('date-label').textContent=fmtDate.format(new Date())+' • WIB';
-    $('today-text').textContent='Prediksi aktif • '+fmtDate.format(new Date());
+    var rk=Object.keys(RESULTS);if(rk.length){var rr=RESULTS[rk[Math.floor(Date.now()/4000)%rk.length]];$('today-text').textContent='Result '+rr.name+' • '+rr.result+' • '+rr.date;}else{$('today-text').textContent='Memuat result terbaru…';}
     renderCounts(list);renderSpot(list);renderTimeline(list);renderGrid(list);renderTicker(list);patchModal(list);
   }
   $('year').textContent=new Date().getFullYear();
