@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Wadah4D - Prediksi Togel Akurat Hari Ini</title>
+<meta name="description" content="Wadah4D – Prediksi togel harian untuk Sydney, Singapore, Hongkong, Toto Wuhan, HK Siang dan Malaysia. Angka 4D, 3D, 2D, BBFS, colok, shio dan Top 2D diperbarui otomatis setiap result." />
+<meta name="theme-color" content="#f5faff" />
+<meta name="color-scheme" content="light" />
+<meta name="format-detection" content="telephone=no" />
+<meta property="og:title" content="Wadah4D - Prediksi Togel Akurat Hari Ini" />
+<meta property="og:description" content="Prediksi togel harian Wadah4D, diperbarui otomatis setiap result pasaran." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230ea5e9'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='white'%3EW4%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+:root{
+  --bg:#f6faff;
+  --surface:#ffffff;
+  --surface-2:#f0f7ff;
+  --ink:#0b2540;
+  --ink-2:#3b5573;
+  --muted:#7890aa;
+  --line:#e2edf8;
+  --line-2:#cfe3f6;
+  --sky:#38bdf8;
+  --sky-600:#0ea5e9;
+  --sky-700:#0284c7;
+  --sky-50:#ecf8ff;
+  --sky-100:#d8f1ff;
+  --ice:#e9f6ff;
+  --open:#10b981; --open-bg:#e7faf3;
+  --wait:#f59e0b; --wait-bg:#fff6e5;
+  --cycle:#6366f1; --cycle-bg:#eef0ff;
+  --done:#64748b; --done-bg:#f1f5f9;
+  --grad:linear-gradient(135deg,#7dd3fc 0%,#38bdf8 45%,#0ea5e9 100%);
+  --grad-soft:linear-gradient(180deg,#eaf7ff 0%,#f6faff 100%);
+  --shadow-sm:0 1px 2px rgba(11,37,64,.05),0 2px 8px rgba(14,165,233,.06);
+  --shadow:0 10px 30px -12px rgba(14,165,233,.28),0 2px 6px rgba(11,37,64,.04);
+  --shadow-lg:0 30px 60px -20px rgba(2,132,199,.35);
+  --r:20px; --r-sm:12px;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.mono{font-family:var(--mono)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:8px}
+
+/* ---------- Ticker ---------- */
+.ticker{background:var(--ink);color:#d8f1ff;font-size:.78rem;font-weight:600;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:48px;padding:8px 0;animation:tick 40s linear infinite}
+.ticker-track span{display:inline-flex;align-items:center;gap:8px}
+.ticker-track i{color:var(--sky)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- Header ---------- */
+.header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+.header-row{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:.95rem;box-shadow:0 6px 16px -6px rgba(14,165,233,.7)}
+.logo b{color:var(--sky-600)}
+.nav{display:flex;gap:4px}
+.nav a{padding:9px 14px;border-radius:999px;font-weight:600;font-size:.92rem;color:var(--ink-2);transition:.2s}
+.nav a:hover{background:var(--sky-50);color:var(--sky-700)}
+.nav a.rtp{color:var(--sky-700)}
+.nav a.rtp::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;margin-right:7px;vertical-align:middle;animation:pulse 1.6s infinite}
+.actions{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:44px;padding:0 20px;border-radius:999px;font-weight:700;font-size:.92rem;transition:transform .15s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px -10px rgba(14,165,233,.8)}
+.btn-primary:hover{box-shadow:0 14px 30px -10px rgba(14,165,233,.95);transform:translateY(-1px)}
+.btn-outline{background:#fff;color:var(--sky-700);border:1.5px solid var(--line-2)}
+.btn-outline:hover{border-color:var(--sky);background:var(--sky-50)}
+.btn-sm{height:40px;padding:0 16px;font-size:.85rem}
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;border:1.5px solid var(--line-2);background:#fff;color:var(--ink)}
+.mobile-nav{display:none;border-top:1px solid var(--line);padding:10px 0 16px}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:flex;justify-content:space-between;align-items:center;padding:13px 6px;font-weight:600;border-bottom:1px dashed var(--line)}
+.mobile-nav a i{color:var(--sky-600)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:56px 0 40px;background:var(--grad-soft);overflow:hidden}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-180px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.28),transparent 65%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(14,165,233,.13) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 75%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;background:#fff;border:1px solid var(--line-2);font-size:.8rem;font-weight:700;color:var(--sky-700);box-shadow:var(--shadow-sm)}
+.eyebrow .dot{width:22px;height:22px;border-radius:50%;background:var(--sky-100);display:grid;place-items:center}
+.eyebrow .dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--open);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.55)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.9rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:20px 0 18px}
+.hero h1 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.06rem;color:var(--ink-2);max-width:520px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px}
+.trust div{display:flex;flex-direction:column}
+.trust strong{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.trust span{font-size:.8rem;color:var(--muted);font-weight:600}
+
+/* Spotlight card */
+.spot{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow-lg)}
+.spot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.spot-name{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin-top:4px}
+.spot-meta{font-size:.85rem;color:var(--ink-2);margin-top:2px}
+.spot-body{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-top:22px}
+.ring{position:relative;width:150px;height:150px}
+.ring svg{transform:rotate(-90deg)}
+.ring-bg{stroke:var(--sky-50)}
+.ring-fg{stroke:url(#ringGrad);stroke-linecap:round;transition:stroke-dashoffset 1s linear}
+.ring-center{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring-time{font-family:var(--mono);font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.ring-phase{font-size:.7rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.spot-nums .label{margin-bottom:8px}
+.big-digits{display:flex;gap:8px}
+.big-digits span{width:46px;height:58px;border-radius:14px;background:var(--grad);color:#fff;font-family:var(--mono);font-weight:800;font-size:1.7rem;display:grid;place-items:center;box-shadow:0 10px 20px -10px rgba(14,165,233,.9)}
+.spot-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.spot-mini div{background:var(--surface-2);border-radius:12px;padding:8px 10px}
+.spot-mini small{display:block;font-size:.66rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.spot-mini b{font-family:var(--mono);font-size:1rem}
+.spot-foot{display:flex;gap:10px;margin-top:22px}
+.spot-foot .btn{flex:1}
+.float-chip{position:absolute;right:28px;bottom:-26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center;font-size:.8rem;font-weight:700}
+.float-chip i{width:32px;height:32px;border-radius:10px;background:var(--sky-100);color:var(--sky-700);display:grid;place-items:center}
+.float-chip small{display:block;color:var(--muted);font-weight:600;font-size:.7rem}
+
+/* ---------- Status pill ---------- */
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:.74rem;font-weight:800;white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s-open{color:var(--open);background:var(--open-bg)}
+.s-wait{color:#c27803;background:var(--wait-bg)}
+.s-cycle{color:var(--cycle);background:var(--cycle-bg)}
+.s-done{color:var(--done);background:var(--done-bg)}
+
+/* ---------- Timeline strip ---------- */
+.timeline{margin-top:-6px;position:relative;z-index:2}
+.tl-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.tl-card::-webkit-scrollbar{display:none}
+.tl-item{flex:1 0 150px;padding:12px 14px;border-radius:14px;background:var(--surface-2);border:1px solid transparent;text-align:left;transition:.2s}
+.tl-item:hover{border-color:var(--line-2);background:#fff;box-shadow:var(--shadow-sm)}
+.tl-item .t{font-family:var(--mono);font-weight:800;font-size:1.05rem}
+.tl-item .n{font-size:.8rem;font-weight:700;color:var(--ink-2);margin-top:2px}
+.tl-item .pill{margin-top:8px;font-size:.66rem;padding:4px 9px}
+
+/* ---------- Banner ---------- */
+.promo{padding:40px 0 10px}
+.slider{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.slides{display:flex;transition:transform .6s cubic-bezier(.22,.8,.2,1)}
+.slide{flex:0 0 100%;min-height:200px;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;color:#fff}
+.slide::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;border:40px solid rgba(255,255,255,.14)}
+.slide.a{background:linear-gradient(120deg,#0284c7,#38bdf8)}
+.slide.b{background:linear-gradient(120deg,#0ea5e9,#67e8f9)}
+.slide.c{background:linear-gradient(120deg,#0369a1,#0ea5e9 60%,#7dd3fc)}
+.slide h3{font-size:clamp(1.3rem,3vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;max-width:560px}
+.slide p{opacity:.9;margin-top:8px;max-width:520px;font-size:.95rem}
+.slide .btn{background:#fff;color:var(--sky-700);position:relative;z-index:1}
+.slide-tag{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.2);padding:5px 10px;border-radius:999px;margin-bottom:10px}
+.dots{position:absolute;left:40px;bottom:16px;display:flex;gap:6px}
+.dots button{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.5);transition:.3s}
+.dots button.on{width:26px;background:#fff}
+
+/* ---------- Markets ---------- */
+.section{padding:56px 0 30px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:6px}
+.sec-head p{color:var(--ink-2);margin-top:6px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.search{flex:1 1 260px;position:relative}
+.search i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;height:48px;border-radius:14px;border:1.5px solid var(--line-2);background:#fff;padding:0 16px 0 44px;font:inherit;color:var(--ink);transition:.2s}
+.search input:focus{outline:0;border-color:var(--sky);box-shadow:0 0 0 4px var(--sky-50)}
+.seg{display:flex;gap:4px;background:#fff;border:1.5px solid var(--line-2);padding:4px;border-radius:14px;overflow-x:auto;scrollbar-width:none}
+.seg button{height:38px;padding:0 14px;border-radius:10px;font-size:.84rem;font-weight:700;color:var(--ink-2);white-space:nowrap;display:inline-flex;align-items:center;gap:7px}
+.seg button .c{font-family:var(--mono);font-size:.72rem;background:var(--surface-2);padding:2px 7px;border-radius:99px}
+.seg button.on{background:var(--ink);color:#fff}
+.seg button.on .c{background:rgba(255,255,255,.18)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column;gap:16px}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card-id{display:flex;gap:12px;align-items:center}
+.badge-code{width:46px;height:46px;border-radius:14px;background:var(--sky-50);color:var(--sky-700);font-family:var(--mono);font-weight:800;font-size:.8rem;display:grid;place-items:center;border:1px solid var(--sky-100)}
+.card-name{font-weight:800;font-size:1.08rem;letter-spacing:-.01em}
+.card-sub{font-size:.78rem;color:var(--muted);font-weight:600}
+.card-main{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px;border-radius:16px;background:var(--grad-soft);border:1px solid var(--sky-100)}
+.d4{display:flex;gap:6px}
+.d4 span{width:40px;height:48px;border-radius:12px;background:#fff;border:1px solid var(--line-2);font-family:var(--mono);font-weight:800;font-size:1.45rem;display:grid;place-items:center;color:var(--sky-700)}
+.cd{text-align:right}
+.cd .v{font-family:var(--mono);font-weight:800;font-size:1.15rem}
+.cd .l{font-size:.68rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fact{padding:9px 10px;border-radius:12px;background:var(--surface-2)}
+.fact small{display:block;font-size:.64rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.fact b{font-family:var(--mono);font-size:.92rem}
+.card-foot{display:flex;gap:8px;margin-top:auto}
+.card-foot .btn{flex:1;height:42px}
+.icon-btn{width:42px;height:42px;flex:0 0 42px;border-radius:12px;border:1.5px solid var(--line-2);background:#fff;color:var(--sky-700);display:grid;place-items:center;transition:.2s}
+.icon-btn:hover{background:var(--sky-50);border-color:var(--sky)}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;border:2px dashed var(--line-2);border-radius:var(--r);color:var(--muted);background:#fff}
+.empty i{font-size:1.8rem;color:var(--sky);margin-bottom:10px}
+
+/* ---------- Features ---------- */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.feat-item i{width:46px;height:46px;border-radius:14px;background:var(--sky-50);color:var(--sky-600);display:grid;place-items:center;font-size:1.1rem;margin-bottom:14px}
+.feat-item h3{font-size:1.05rem;font-weight:800}
+.feat-item p{color:var(--ink-2);font-size:.92rem;margin-top:6px}
+
+/* ---------- CTA ---------- */
+.cta{margin:40px 0 0;border-radius:28px;padding:44px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;right:-100px;bottom:-160px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.5),transparent 65%)}
+.cta h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.cta p{color:#b9d9f2;margin-top:6px}
+.cta .btn{position:relative}
+
+/* ---------- Footer ---------- */
+footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:44px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot-grid p{color:var(--ink-2);font-size:.92rem;margin-top:12px;max-width:440px}
+.foot-grid h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.foot-grid ul{list-style:none;display:grid;gap:8px}
+.foot-grid ul a{color:var(--ink-2);font-weight:600;font-size:.92rem}
+.foot-grid ul a:hover{color:var(--sky-700)}
+.foot-bottom{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:.82rem}
+.age{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.age b{border:1.5px solid var(--muted);border-radius:6px;padding:0 5px;font-size:.72rem}
+
+/* ---------- Modal ---------- */
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(11,37,64,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.sheet{width:min(760px,100%);max-height:calc(100vh - 32px);overflow:auto;background:#fff;border-radius:26px;box-shadow:var(--shadow-lg);animation:up .28s cubic-bezier(.22,.8,.2,1)}
+@keyframes up{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+.sheet-head{position:sticky;top:0;z-index:2;background:linear-gradient(135deg,#0284c7,#38bdf8);color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.sheet-head h3{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.sheet-head small{opacity:.85;font-weight:600}
+.x{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;display:grid;place-items:center}
+.sheet-body{padding:22px 24px 26px;display:grid;gap:18px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tri div{text-align:center;padding:14px;border-radius:16px;background:var(--grad-soft);border:1px solid var(--sky-100)}
+.tri b{display:block;font-family:var(--mono);font-size:1.7rem;font-weight:800;color:var(--sky-700);letter-spacing:.06em}
+.box{border:1px solid var(--line);border-radius:18px;padding:16px}
+.box h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rows{display:grid;gap:2px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.row:last-child{border:0}
+.row span{color:var(--ink-2)}
+.row b{font-family:var(--mono);text-align:right}
+.row a{color:var(--sky-700);font-weight:700;word-break:break-all;text-align:right}
+.p2{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.p2 span{text-align:center;padding:9px 0;border-radius:10px;background:var(--surface-2);font-family:var(--mono);font-weight:800;color:var(--ink)}
+.p2 span.hot{background:var(--grad);color:#fff}
+.sheet-actions{display:flex;gap:10px;flex-wrap:wrap}
+.sheet-actions .btn{flex:1}
+.sch{width:100%;border-collapse:collapse;font-size:.9rem}
+.sch th{text-align:left;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 8px;border-bottom:1px solid var(--line)}
+.sch td{padding:12px 8px;border-bottom:1px dashed var(--line)}
+.sch td.m{font-family:var(--mono);font-weight:700}
+
+/* ---------- Toast ---------- */
+.toasts{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:90;display:grid;gap:8px}
+.toast{background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;font-size:.88rem;box-shadow:var(--shadow-lg);display:flex;gap:10px;align-items:center;animation:up .25s}
+.toast i{color:var(--sky)}
+
+/* ---------- Bottom bar (mobile) ---------- */
+.bottom-bar{display:none}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .float-chip{display:none}
+  .feat{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid > div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .actions .btn-login{display:none}
+  .hero{padding:36px 0 30px}
+  .spot{padding:20px;border-radius:24px}
+  .spot-body{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .big-digits{justify-content:center}
+  .grid{grid-template-columns:1fr}
+  .slide{flex-direction:column;align-items:flex-start;padding:28px 24px 44px}
+  .dots{left:24px}
+  .two{grid-template-columns:1fr}
+  .p2{grid-template-columns:repeat(5,1fr)}
+  .cta{padding:30px 24px}
+  .tri b{font-size:1.35rem}
+  .d4 span{width:36px;height:44px;font-size:1.25rem}
+  .sheet{border-radius:22px}
+  body{padding-bottom:76px}
+  .bottom-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  .bottom-bar .btn{flex:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<style>
+	#lovable-badge {
+		--badge-bg: #1b1b1b;
+		--badge-text: #c5c1b9;
+		--badge-text-hover: #dcdad5;
+		--badge-radius: 6px;
+		--badge-padding: 8px;
+		--badge-gap: 6px;
+		--badge-shadow: 
+			0 0 0 1px rgba(0, 0, 0, 0.88),
+			0 1px 0 0 rgba(0, 0, 0, 0.04),
+			0 2px 2px -1px rgba(0, 0, 0, 0.08),
+			0 4px 4px -2px rgba(0, 0, 0, 0.08),
+			0 8px 8px -4px rgba(0, 0, 0, 0.08),
+			0 16px 16px -8px rgba(0, 0, 0, 0.08);
+		--badge-transition-duration: 0.2s;
+		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+		--focus-color: #575ECF;
+		--focus-offset: 2px;
+		--focus-width: 2px;
+		
+		position: fixed;
+		bottom: 12px;
+		right: 12px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		z-index: 1000000;
+		background-color: var(--badge-bg) !important;
+		color: var(--badge-text) !important;
+		border-radius: var(--badge-radius);
+		box-shadow: var(--badge-shadow) !important;
+		font-size: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-weight: 400 !important;
+		text-transform: none !important;
+		font-feature-settings: normal !important;
+		transform: translateZ(0);
+		will-change: transform, opacity;
+		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+	}
+
+	#lovable-badge.closing {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#lovable-badge-cta {
+		display: flex;
+		align-items: baseline;
+		gap: var(--badge-gap);
+		box-sizing: border-box;
+		padding: 4px var(--badge-padding) 0;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-cta:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--badge-text-hover);
+	}
+
+	#lovable-badge-cta:active {
+		transform: scale(0.98);
+	}
+
+	#lovable-badge-cta:focus {
+		outline: none;
+	}
+
+	#lovable-badge-cta:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: var(--focus-offset);
+		z-index: 1;
+	}
+
+	#lovable-badge-text {
+		line-height: 1;
+	}
+
+	/* The wordmark baseline sits at y=12 of the 16px logo; an empty 12px box
+	   makes that the flex baseline so the text aligns to it on any system font. */
+	#lovable-badge-logo {
+		position: relative;
+		display: block;
+		width: 52px;
+		height: 12px;
+	}
+
+	#lovable-badge-logo svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#lovable-badge-divider {
+		width: 1px;
+		height: 24px;
+		background-color: rgba(255, 255, 255, 0.04);
+		flex-shrink: 0;
+	}
+
+	#lovable-badge-close {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+		flex-shrink: 0;
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-close:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	#lovable-badge-close:active {
+		transform: scale(0.92);
+	}
+
+	#lovable-badge-close:focus {
+		outline: none;
+	}
+
+	#lovable-badge-close:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: calc(var(--focus-offset) * -1);
+		z-index: 1;
+	}
+
+	#lovable-badge-close svg path {
+		fill: var(--badge-text);
+		transition: fill var(--badge-transition-duration) ease;
+	}
+
+	#lovable-badge-close:hover svg path {
+		fill: var(--badge-text-hover);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#lovable-badge,
+		#lovable-badge-cta,
+		#lovable-badge-close,
+		#lovable-badge-close svg path {
+			transition: none;
+		}
+		
+		#lovable-badge-cta:active,
+		#lovable-badge-close:active {
+			transform: none;
+		}
+	}
+
+	@media (prefers-contrast: high) {
+		#lovable-badge {
+			--badge-bg: #000;
+			--badge-text: #fff;
+			--badge-text-hover: #fff;
+			border: 2px solid currentColor;
+		}
+		
+		#lovable-badge-cta:focus-visible,
+		#lovable-badge-close:focus-visible {
+			outline-width: 3px;
+		}
+	}
+</style>
+<script defer src="/__l5e/events.b21a279f52bb8621.js" data-artifact-kind="static_preview" data-artifact-id="4d13f0989e65b6d2e076be331895023d6b057eff" data-commit-sha="4d13f0989e65b6d2e076be331895023d6b057eff" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF81NzVuYWZ2NHZhOTU3dmYwZ2Nxc2t3NDh4dyIsImFydGlmYWN0X2tpbmQiOiJzdGF0aWNfcHJldmlldyIsImFydGlmYWN0X2lkIjoiNGQxM2YwOTg5ZTY1YjZkMmUwNzZiZTMzMTg5NTAyM2Q2YjA1N2VmZiIsImNvbW1pdF9zaGEiOiI0ZDEzZjA5ODllNjViNmQyZTA3NmJlMzMxODk1MDIzZDZiMDU3ZWZmIiwiZXhwIjoxNzkyODY1MTc2fQ.-TFNCn5cvZP4pUA9kt4x5w1ek_ZaikcNDIgDWsmu3F8" data-track-url="/__l5e/trackevents?__lovable_sha=4d13f0989e65b6d2e076be331895023d6b057eff"></script><meta name="twitter:title" content="Wadah4D - Prediksi Togel Akurat Hari Ini"><meta name="twitter:description" content="Prediksi togel harian Wadah4D, diperbarui otomatis setiap result pasaran."><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_575nafv4va957vf0gcqskw48xw/92691f239cdfd2ec61944fc2552b78cd_1792861406907.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_575nafv4va957vf0gcqskw48xw/92691f239cdfd2ec61944fc2552b78cd_1792861406907.png"></head>
+<body>
+
+<div class="ticker" aria-label="Informasi berjalan">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <div class="header-row">
+      <a href="#beranda" class="logo" aria-label="Wadah4D beranda">
+        <span class="https://i.ibb.co/KpnHncMz/Screenshot-15-removebg-preview.png"</span>
+        <span>Wadah<b>4D</b></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#pasaran">Pasaran</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#informasi">Informasi</a>
+        <a href="https://ertepe.luvtoberi.com/index.html?rtp=wadah4d" class="rtp" target="_blank" rel="noopener">RTP Live</a>
+      </nav>
+      <div class="actions">
+        <a href="https://wadahbesar.com/" target="_blank" rel="noopener" class="btn btn-outline btn-sm btn-login">Masuk</a>
+        <a href="https://wadahbesar.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Daftar</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Buka menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#beranda">Beranda <i class="fa-solid fa-house"></i></a>
+      <a href="#pasaran">Pasaran <i class="fa-solid fa-chart-simple"></i></a>
+      <a href="#keunggulan">Keunggulan <i class="fa-solid fa-star"></i></a>
+      <a href="#informasi">Informasi <i class="fa-solid fa-circle-info"></i></a>
+      <a href="https://ertepe.luvtoberi.com/index.html?rtp=wadah4d" target="_blank" rel="noopener">RTP Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a href="https://wadahbesar.com/" target="_blank" rel="noopener">Masuk <i class="fa-solid fa-right-to-bracket"></i></a>
+    </div>
+  </div>
+</header>
+
+<main id="beranda">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span><span id="today-text">Prediksi aktif hari ini</span></span>
+        <h1>Prediksi Togel<br><span class="accent">Wadah4D</span> Terpercaya</h1>
+        <p class="lead">Wadah4D telah beroperasi sejak tahun 2015, menghadirkan prediksi harian yang diperbarui otomatis setiap result untuk pasaran-pasaran favorit Anda.</p>
+        <div class="hero-cta">
+          <a href="#pasaran" class="btn btn-primary">Lihat Prediksi <i class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn btn-outline" id="open-schedule"><i class="fa-regular fa-calendar"></i> Jadwal Lengkap</button>
+        </div>
+        <div class="trust">
+          <div><strong id="stat-markets">6</strong><span>Pasaran aktif</span></div>
+          <div><strong>24/7</strong><span>Update otomatis</span></div>
+          <div><strong>2015</strong><span>Berdiri sejak</span></div>
+        </div>
+      </div>
+
+      <aside class="spot" aria-label="Pasaran terdekat">
+        <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs></svg>
+        <div class="spot-top">
+          <div>
+            <div class="label">Pasaran Terdekat</div>
+            <div class="spot-name" id="spot-name">—</div>
+            <div class="spot-meta" id="spot-meta">—</div>
+          </div>
+          <span class="pill s-open" id="spot-pill">Buka</span>
+        </div>
+        <div class="spot-body">
+          <div class="ring">
+            <svg width="150" height="150" viewBox="0 0 150 150">
+              <circle class="ring-bg" cx="75" cy="75" r="64" fill="none" stroke-width="12"/>
+              <circle class="ring-fg" id="ring-fg" cx="75" cy="75" r="64" fill="none" stroke-width="12" stroke-dasharray="402.1" stroke-dashoffset="0"/>
+            </svg>
+            <div class="ring-center"><div><div class="ring-time" id="spot-cd">00:00:00</div><div class="ring-phase" id="spot-phase">Tutup dalam</div></div></div>
+          </div>
+          <div class="spot-nums">
+            <div class="label">Prediksi 4D</div>
+            <div class="big-digits" id="spot-digits"></div>
+            <div class="spot-mini">
+              <div><small>BBFS</small><b id="spot-bbfs">-</b></div>
+              <div><small>Shio</small><b id="spot-shio">-</b></div>
+              <div><small>Colok</small><b id="spot-colok">-</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="spot-foot">
+          <button class="btn btn-primary" id="spot-detail">Detail Prediksi</button>
+          <a class="btn btn-outline" href="https://wadahbesar.com/" target="_blank" rel="noopener">Pasang Sekarang</a>
+        </div>
+        <div class="float-chip"><i class="fa-solid fa-shield-halved"></i><div>Resmi &amp; Legal<small>Lottery sah internasional</small></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="wrap timeline">
+    <div class="tl-card" id="timeline" aria-label="Urutan jadwal hari ini"></div>
+  </div>
+
+  <section class="wrap promo" aria-label="Promo">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <div class="slide a"><div><span class="slide-tag">Member Baru</span><h3>Bonus sambutan untuk member baru Wadah4D</h3><p>Daftar hari ini dan nikmati pengalaman bermain yang aman, cepat, dan nyaman.</p></div><a class="btn" href="https://wadahbesar.com/" target="_blank" rel="noopener">Daftar Sekarang</a></div>
+        <div class="slide b"><div><span class="slide-tag">Transaksi</span><h3>Deposit &amp; withdraw kilat dalam hitungan menit</h3><p>Didukung berbagai bank lokal dan e-wallet populer, aktif 24 jam.</p></div><a class="btn" href="https://wadahbesar.com/" target="_blank" rel="noopener">Mulai Main</a></div>
+        <div class="slide c"><div><span class="slide-tag">Pasaran Resmi</span><h3>Hanya pasaran lottery legal &amp; sah</h3><p>Sydney, Singapore, Hongkong, Toto Wuhan, HK Siang dan Malaysia.</p></div><a class="btn" href="#pasaran">Lihat Pasaran</a></div>
+      </div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="pasaran">
+    <div class="sec-head">
+      <div>
+        <div class="label" id="date-label">Hari ini</div>
+        <h2>Prediksi Pasaran Hari Ini</h2>
+        <p>Angka diperbarui otomatis setelah setiap pasaran selesai result.</p>
+      </div>
+    </div>
+    <div class="toolbar">
+      <label class="search"><span class="sr-only">Cari pasaran</span><i class="fa-solid fa-magnifying-glass"></i><input id="search" type="search" placeholder="Cari pasaran, kode, atau angka…" autocomplete="off"></label>
+      <div class="seg" id="seg" role="tablist" aria-label="Filter status">
+        <button data-f="all" class="on">Semua <span class="c" id="c-all">0</span></button>
+        <button data-f="open">Buka <span class="c" id="c-open">0</span></button>
+        <button data-f="wait">Diundi <span class="c" id="c-wait">0</span></button>
+        <button data-f="cycle">Tiap 3 Jam <span class="c" id="c-cycle">0</span></button>
+        <button data-f="done">Result <span class="c" id="c-done">0</span></button>
+      </div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </section>
+
+  <section class="section wrap" id="keunggulan">
+    <div class="sec-head"><div><div class="label">Kenapa Wadah4D</div><h2>Dibangun untuk pemain yang serius</h2></div></div>
+    <div class="feat">
+      <div class="feat-item"><i class="fa-solid fa-rotate"></i><h3>Update Otomatis</h3><p>Prediksi berganti otomatis tepat setelah jam result tiap pasaran — tanpa perlu refresh manual.</p></div>
+      <div class="feat-item"><i class="fa-solid fa-shield-halved"></i><h3>Pasaran Legal</h3><p>Wadah4D hanya menyelenggarakan lottery dari negara yang menyediakan hasil resmi dan sah.</p></div>
+      <div class="feat-item"><i class="fa-solid fa-bolt"></i><h3>Cepat &amp; Ringan</h3><p>Tampilan ringan, nyaman di HP maupun desktop, lengkap dengan hitung mundur waktu nyata.</p></div>
+    </div>
+    <div class="cta">
+      <div><h2>Siap pasang angka jagoanmu?</h2><p>Bergabung bersama ribuan member Wadah4D sekarang juga.</p></div>
+      <a class="btn btn-primary" href="https://wadahbesar.com/" target="_blank" rel="noopener">Daftar Gratis <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+</main>
+
+<footer id="informasi">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#beranda" class="logo"><span class="logo-mark">W4</span><span>Wadah<b>4D</b></span></a>
+        <p>Wadah4D adalah platform digital inovatif yang menjunjung tinggi akses mudah serta memberikan pengalaman terbaik setiap hari. Jika Anda mencari platform yang menawarkan lebih dari sekadar permainan, namun sebuah pengalaman komunitas, Wadah4D adalah tempatnya.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul><li><a href="#beranda">Beranda</a></li><li><a href="#pasaran">Pasaran</a></li><li><a href="#keunggulan">Keunggulan</a></li><li><a href="https://ertepe.luvtoberi.com/index.html?rtp=wadah4d" target="_blank" rel="noopener">RTP Live</a></li></ul>
+      </div>
+      <div>
+        <h4>Akun</h4>
+        <ul><li><a href="https://wadahbesar.com/" target="_blank" rel="noopener">Daftar</a></li><li><a href="https://wadahbesar.com/" target="_blank" rel="noopener">Masuk</a></li><li><a href="#" id="foot-schedule">Jadwal Lengkap</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Wadah4D. All rights reserved.</span>
+      <span class="age"><b>18+</b> Bermainlah secara bertanggung jawab</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bottom-bar">
+  <a class="btn btn-outline" href="https://wadahbesar.com/" target="_blank" rel="noopener">Masuk</a>
+  <a class="btn btn-primary" href="https://wadahbesar.com/" target="_blank" rel="noopener">Daftar</a>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="sheet"></div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>window.__RESULTS__={"SYDNEY":{"name":"SYDNEY","result":"7606","date":"24/10/2026"},"SINGAPORE":{"name":"SINGAPORE","result":"3837","date":"24/10/2026"},"HONGKONG":{"name":"HONGKONG","result":"1269","date":"24/10/2026"},"TOTO WUHAN":{"name":"TOTO WUHAN","result":"1685","date":"25/10/2026"},"HK SIANG":{"name":"HK SIANG","result":"2384","date":"24/10/2026"},"MALAYSIA":{"name":"MALAYSIA","result":"8115","date":"24/10/2026"}};</script><script>
+(function(){
+  'use strict';
+  var LINK = 'https://wadahbesar.com/';
+  var RESULTS = window.__RESULTS__||{};
+  function loadResults(){fetch('/api/results').then(function(r){return r.json()}).then(function(d){if(d&&d.results){RESULTS=d.results}}).catch(function(){})}
+  loadResults();setInterval(loadResults,60000);
+
+  var MARKETS = [
+    {id:'sydney',name:'SYDNEY',code:'SYD',close:'13:00',draw:'14:00',website:'https://www.sydneypoolstoday.com',openDays:'Setiap Hari'},
+    {id:'singapore',name:'SINGAPORE',code:'SGP',close:'17:25',draw:'17:45',website:'https://www.singaporepools.com.sg',openDays:'Senin, Rabu, Kamis, Sabtu, Minggu',closedDays:'Selasa, Jumat'},
+    {id:'hongkong',name:'HONGKONG',code:'HKG',close:'22:15',draw:'23:00',website:'https://www.hongkongpools.com',openDays:'Setiap Hari'},
+    {id:'wuhan',name:'TOTO WUHAN',code:'WUH',cycle3h:true,close:'Tiap 3 jam',draw:'Tiap 3 jam',website:'https://www.totowuhan.com',openDays:'Setiap Hari',openHours:['09:00','12:00','15:00','18:00','21:00','00:00']},
+    {id:'hksiang',name:'HK SIANG',code:'HKS',close:'10:30',draw:'11:00',website:'https://www.hkpools1.com',openDays:'Setiap Hari'},
+    {id:'malaysia',name:'MALAYSIA',code:'MLS',close:'18:30',draw:'19:00',website:'https://www.malaysialottery.net',openDays:'Setiap Hari'}
+  ];
+  var SHIO = ['TIKUS','KERBAU','MACAN','KELINCI','NAGA','ULAR','KUDA','KAMBING','MONYET','AYAM','ANJING','BABI'];
+
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(v){return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')};
+  var pad = function(n){return String(n).padStart(2,'0')};
+
+  /* ---------- Waktu WIB ---------- */
+  var fmtParts = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Jakarta',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+  var fmtDate = new Intl.DateTimeFormat('id-ID',{timeZone:'Asia/Jakarta',weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+  function now(){
+    var p={};fmtParts.formatToParts(new Date()).forEach(function(x){if(x.type!=='literal')p[x.type]=x.value});
+    var h=Number(p.hour)%24,m=Number(p.minute),s=Number(p.second);
+    return {year:+p.year,month:+p.month,day:+p.day,totalSec:h*3600+m*60+s};
+  }
+  function toSec(v){var a=v.split(':').map(Number);return a[0]*3600+a[1]*60}
+  function toHHMM(sec){sec=((sec%86400)+86400)%86400;return pad(Math.floor(sec/3600))+':'+pad(Math.floor(sec%3600/60))}
+  function fmtCd(t){t=Math.max(0,t);return pad(Math.floor(t/3600))+':'+pad(Math.floor(t%3600/60))+':'+pad(t%60)}
+
+  /* ---------- Generator prediksi (deterministik per siklus result) ---------- */
+  function hashString(v){var h=1779033703^v.length;for(var i=0;i<v.length;i++){h=Math.imul(h^v.charCodeAt(i),3432918353);h=(h<<13)|(h>>>19)}h=Math.imul(h^(h>>>16),2246822507);h=Math.imul(h^(h>>>13),3266489909);return(h^(h>>>16))>>>0}
+  function mulberry32(seed){return function(){var t=seed+=0x6D2B79F5;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296}}
+  function shuffled(r){var p=['0','1','2','3','4','5','6','7','8','9'];for(var i=p.length-1;i>0;i--){var j=Math.floor(r()*(i+1));var t=p[i];p[i]=p[j];p[j]=t}return p}
+  function wpick(r,pool,pri){var bag=[].concat(pri,pri,pri,pool.slice(0,7),pool);return bag[Math.floor(r()*bag.length)]}
+  function top2d(r,md,bb,pool){
+    var out=[],seen={};
+    function add(v){if(/^\d{2}$/.test(v)&&!seen[v]){seen[v]=1;out.push(v)}}
+    [md[0]+md[1],md[2]+md[3],bb[4]+md[0],md[1]+bb[4],md[0]+md[2],md[3]+md[1],bb[4]+md[2],md[1]+md[0]].forEach(add);
+    var guard=0;
+    while(out.length<25&&guard++<5000){var a=wpick(r,pool,bb),b=wpick(r,pool,md);if(out.length<10&&a===b){b=pool.filter(function(d){return d!==a})[0]}add(a+b)}
+    return out.slice(0,25);
+  }
+  function pack(seed){
+    var r=mulberry32(hashString(seed)),pool=shuffled(r),md=pool.slice(0,4),bb=pool.slice(0,5),a4=md.join('');
+    var shio=SHIO[Math.floor(r()*SHIO.length)],t2=top2d(r,md,bb,pool);
+    return {angka4d:a4,angka3d:a4.slice(1),angka2d:a4.slice(2),mainDigits:md,bbfs:bb,colok:[md[0],bb[4]],shio:shio,top2d:t2,hot2d:t2.slice(0,3),as:a4[0],kop:a4[1],kepala:a4[2],ekor:a4[3]};
+  }
+  var cache={};
+  function getPack(m,n){
+    var key;
+    if(m.cycle3h){
+      key=n.year+'-'+pad(n.month)+'-'+pad(n.day)+':cycle-'+Math.floor(n.totalSec/10800);
+    }else{
+      var d=new Date(Date.UTC(n.year,n.month-1,n.day));
+      if(n.totalSec<toSec(m.draw))d.setUTCDate(d.getUTCDate()-1);
+      key=d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1)+'-'+pad(d.getUTCDate())+'@'+m.draw;
+    }
+    var ck=key+':'+m.id+':'+m.code;
+    if(!cache[ck]){if(Object.keys(cache).length>200)cache={};cache[ck]=pack(ck)}
+    return cache[ck];
+  }
+
+  /* ---------- Status pasaran ---------- */
+  function runtime(m,s){
+    if(m.cycle3h){
+      var marks=[3,6,9,12,15,18,21,24].map(function(h){return h*3600});
+      var next=marks.filter(function(x){return x>s})[0]||86400,cd=next-s,w=cd<=1200,nt=toHHMM(next);
+      return {key:w?'wait':'cycle',status:w?'Sedang Diundi':'Setiap 3 Jam',phase:w?'Diundi dalam':'Sesi berikutnya',cd:cd,total:w?1200:10800,closeText:'Tiap 3 jam',drawText:'Berikutnya '+nt,meta:'Setiap 3 jam • Undian '+nt,sortTime:nt};
+    }
+    var c=toSec(m.close),d=toSec(m.draw);
+    if(s<c)return {key:'open',status:'Buka',phase:'Tutup dalam',cd:c-s,total:Math.max(c-d+86400,1),closeText:m.close,drawText:m.draw,meta:'Tutup '+m.close+' • Diundi '+m.draw,sortTime:m.close};
+    if(s<d)return {key:'wait',status:'Sedang Diundi',phase:'Result dalam',cd:d-s,total:Math.max(d-c,1),closeText:m.close,drawText:m.draw,meta:'Tutup '+m.close+' • Diundi '+m.draw,sortTime:m.close};
+    return {key:'done',status:'Result Selesai',phase:'Buka lagi dalam',cd:86400-s+c,total:Math.max(86400-d+c,1),closeText:'Besok '+m.close,drawText:'Besok '+m.draw,meta:'Result selesai • Buka besok '+m.close,sortTime:m.close};
+  }
+  var PILL={open:'s-open',wait:'s-wait',cycle:'s-cycle',done:'s-done'};
+  function enrich(){
+    var n=now();
+    return MARKETS.map(function(m){return Object.assign({},m,getPack(m,n),{rt:runtime(m,n.totalSec)})});
+  }
+
+  /* ---------- State ---------- */
+  var st={q:'',f:'all',sig:'',modal:null,spotId:null};
+  try{var saved=JSON.parse(localStorage.getItem('wadah4d-prefs')||'{}');if(saved.f)st.f=saved.f}catch(e){}
+
+  function filtered(list){
+    var q=st.q.toLowerCase().trim();
+    return list.filter(function(i){
+      if(st.f!=='all'&&i.rt.key!==st.f)return false;
+      if(!q)return true;
+      return [i.name,i.code,i.angka4d,i.angka3d,i.angka2d,i.bbfs.join(''),i.shio,i.top2d.join(' '),i.rt.status].join(' ').toLowerCase().indexOf(q)>-1;
+    }).sort(function(a,b){return a.rt.cd-b.rt.cd||a.name.localeCompare(b.name)});
+  }
+
+  function cardHTML(i){
+    return '<article class="card" data-id="'+i.id+'">'+
+      '<div class="card-head"><div class="card-id"><span class="badge-code">'+esc(i.code)+'</span><div><div class="card-name">'+esc(i.name)+'</div><div class="card-sub" data-r="meta">'+esc(i.rt.meta)+'</div></div></div>'+
+      '<span class="pill '+PILL[i.rt.key]+'" data-r="pill">'+esc(i.rt.status)+'</span></div>'+
+      '<div class="card-main"><div class="d4" data-r="d4">'+i.mainDigits.map(function(d){return '<span>'+d+'</span>'}).join('')+'</div>'+
+      '<div class="cd"><div class="v mono" data-r="cd">'+fmtCd(i.rt.cd)+'</div><div class="l" data-r="phase">'+esc(i.rt.phase)+'</div></div></div>'+
+      '<div class="facts"><div class="fact"><small>3D</small><b data-r="3d">'+i.angka3d+'</b></div><div class="fact"><small>2D</small><b data-r="2d">'+i.angka2d+'</b></div><div class="fact"><small>BBFS</small><b data-r="bbfs">'+i.bbfs.join('')+'</b></div><div class="fact"><small>Shio</small><b data-r="shio" style="font-size:.78rem">'+i.shio+'</b></div></div>'+
+      '<div class="card-foot"><button class="btn btn-primary" data-open="'+i.id+'">Lihat Detail</button><button class="icon-btn" data-copy="'+i.id+'" aria-label="Salin prediksi '+esc(i.name)+'"><i class="fa-regular fa-copy"></i></button><a class="icon-btn" href="'+LINK+'" target="_blank" rel="noopener" aria-label="Pasang di Wadah4D"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>'+
+    '</article>';
+  }
+  function setT(root,sel,val){var n=root.querySelector(sel);if(n&&n.textContent!==val)n.textContent=val}
+
+  function renderGrid(list){
+    var g=$('grid'),items=filtered(list);
+    var sig=st.f+'|'+st.q+'|'+items.map(function(i){return i.id+i.angka4d+i.rt.key}).join(',');
+    if(sig!==st.sig){
+      st.sig=sig;
+      g.innerHTML=items.length?items.map(cardHTML).join(''):'<div class="empty"><i class="fa-solid fa-magnifying-glass"></i><div><b>Pasaran tidak ditemukan</b></div><div>Coba kata kunci atau filter lain.</div></div>';
+    }else{
+      items.forEach(function(i){var c=g.querySelector('[data-id="'+i.id+'"]');if(!c)return;setT(c,'[data-r=cd]',fmtCd(i.rt.cd));setT(c,'[data-r=phase]',i.rt.phase);setT(c,'[data-r=meta]',i.rt.meta)});
+    }
+  }
+
+  function renderCounts(list){
+    var c={all:list.length,open:0,wait:0,cycle:0,done:0};
+    list.forEach(function(i){c[i.rt.key]++});
+    Object.keys(c).forEach(function(k){var n=$('c-'+k);if(n)n.textContent=c[k]});
+    $('stat-markets').textContent=list.length;
+  }
+
+  function renderSpot(list){
+    var pool=list.filter(function(i){return i.rt.key!=='done'});
+    var s=(pool.length?pool:list).slice().sort(function(a,b){return a.rt.cd-b.rt.cd})[0];
+    if(!s)return;
+    st.spotId=s.id;
+    $('spot-name').textContent=s.name;
+    $('spot-meta').textContent=s.rt.meta;
+    var p=$('spot-pill');p.className='pill '+PILL[s.rt.key];p.textContent=s.rt.status;
+    $('spot-cd').textContent=fmtCd(s.rt.cd);
+    $('spot-phase').textContent=s.rt.phase;
+    var dg=s.mainDigits.map(function(d){return '<span>'+d+'</span>'}).join('');
+    if($('spot-digits').innerHTML!==dg)$('spot-digits').innerHTML=dg;
+    $('spot-bbfs').textContent=s.bbfs.join('');
+    $('spot-shio').textContent=s.shio;
+    $('spot-colok').textContent=s.colok.join('•');
+    var C=402.1,ratio=Math.min(1,Math.max(0,s.rt.cd/s.rt.total));
+    $('ring-fg').setAttribute('stroke-dashoffset',String(C*(1-ratio)));
+  }
+
+  function renderTimeline(list){
+    var items=list.slice().sort(function(a,b){return a.rt.sortTime.localeCompare(b.rt.sortTime)});
+    var html=items.map(function(i){
+      var t=i.cycle3h?i.rt.drawText.replace('Berikutnya ',''):i.close;
+      return '<button class="tl-item" data-open="'+i.id+'"><div class="t">'+t+'</div><div class="n">'+esc(i.name)+'</div><span class="pill '+PILL[i.rt.key]+'">'+esc(i.rt.status)+'</span></button>';
+    }).join('');
+    var tl=$('timeline');if(tl.innerHTML!==html)tl.innerHTML=html;
+  }
+
+  function renderTicker(list){
+    var parts=list.map(function(i){return (function(){var r=RESULTS[i.name];return '<span><i class="fa-solid fa-circle"></i>'+esc(i.name)+' • RESULT '+(r?esc(r.result)+' • '+esc(r.date):'----')+'</span>'})()});
+    parts.push('<span><i class="fa-solid fa-star"></i>Result otomatis diperbarui langsung dari pasaran resmi</span>');
+    var html=parts.join('')+parts.join('');
+    var t=$('ticker');if(t.innerHTML!==html)t.innerHTML=html;
+  }
+
+  /* ---------- Modal ---------- */
+  function marketModal(i){
+    var rows='<div class="row"><span>Tutup</span><b>'+esc(i.rt.closeText)+'</b></div><div class="row"><span>Diundi</span><b>'+esc(i.rt.drawText)+'</b></div><div class="row"><span>Hari Buka</span><b>'+esc(i.openDays)+'</b></div>';
+    if(i.closedDays)rows+='<div class="row"><span>Hari Libur</span><b>'+esc(i.closedDays)+'</b></div>';
+    if(i.openHours)rows+='<div class="row"><span>Jam Sesi</span><b>'+esc(i.openHours.join(' • '))+'</b></div>';
+    rows+='<div class="row"><span>Website</span><a href="'+esc(i.website)+'" target="_blank" rel="noopener">'+esc(i.website.replace(/^https?:\/\//,''))+'</a></div>';
+    return '<div class="sheet-head"><div><h3 id="modal-title">'+esc(i.name)+'</h3><small>'+esc(i.code)+' • <span data-m="phase">'+esc(i.rt.phase)+'</span> <span class="mono" data-m="cd">'+fmtCd(i.rt.cd)+'</span></small></div><button class="x" data-close aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button></div>'+
+    '<div class="sheet-body">'+
+      '<div class="tri"><div><span class="label">4D</span><b>'+i.angka4d+'</b></div><div><span class="label">3D</span><b>'+i.angka3d+'</b></div><div><span class="label">2D</span><b>'+i.angka2d+'</b></div></div>'+
+      '<div class="two">'+
+        '<div class="box"><h4>Prediksi Ringkas</h4><div class="rows">'+
+          '<div class="row"><span>Angka Main</span><b>'+i.mainDigits.join(' ')+'</b></div>'+
+          '<div class="row"><span>BBFS</span><b>'+i.bbfs.join(' ')+'</b></div>'+
+          '<div class="row"><span>As Kop Kpl Ekor</span><b>'+[i.as,i.kop,i.kepala,i.ekor].join(' ')+'</b></div>'+
+          '<div class="row"><span>Colok Bebas</span><b>'+i.colok.join(' • ')+'</b></div>'+
+          '<div class="row"><span>Shio</span><b>'+i.shio+'</b></div>'+
+          '<div class="row"><span>Angka Panas</span><b>'+i.hot2d.join(' ')+'</b></div>'+
+        '</div></div>'+
+        '<div class="box"><h4>Info Pasaran <span class="pill '+PILL[i.rt.key]+'">'+esc(i.rt.status)+'</span></h4><div class="rows">'+rows+'</div></div>'+
+      '</div>'+
+      '<div class="box"><h4>Top 2D <span style="letter-spacing:0;text-transform:none;font-weight:600">25 line</span></h4><div class="p2">'+i.top2d.map(function(p,k){return '<span class="'+(k<3?'hot':'')+'">'+p+'</span>'}).join('')+'</div></div>'+
+      '<div class="sheet-actions"><button class="btn btn-outline" data-copy="'+i.id+'"><i class="fa-regular fa-copy"></i> Salin Prediksi</button><a class="btn btn-primary" href="'+LINK+'" target="_blank" rel="noopener">Pasang di Wadah4D <i class="fa-solid fa-arrow-right"></i></a></div>'+
+    '</div>';
+  }
+  function scheduleModal(list){
+    var items=list.slice().sort(function(a,b){return a.rt.sortTime.localeCompare(b.rt.sortTime)});
+    return '<div class="sheet-head"><div><h3 id="modal-title">Jadwal Lengkap</h3><small>Semua waktu dalam WIB</small></div><button class="x" data-close aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button></div>'+
+      '<div class="sheet-body"><div style="overflow-x:auto"><table class="sch"><thead><tr><th>Pasaran</th><th>Tutup</th><th>Diundi</th><th>Status</th></tr></thead><tbody>'+
+      items.map(function(i){return '<tr><td><b>'+esc(i.name)+'</b><div class="card-sub">'+esc(i.closedDays?'Libur '+i.closedDays:i.openDays)+'</div></td><td class="m">'+esc(i.cycle3h?'Tiap 3 jam':i.close)+'</td><td class="m">'+esc(i.cycle3h?'Tiap 3 jam':i.draw)+'</td><td><span class="pill '+PILL[i.rt.key]+'">'+esc(i.rt.status)+'</span></td></tr>'}).join('')+
+      '</tbody></table></div><a class="btn btn-primary" href="'+LINK+'" target="_blank" rel="noopener">Pasang Sekarang di Wadah4D</a></div>';
+  }
+  var lastFocus=null;
+  function openModal(view){
+    st.modal=view;lastFocus=document.activeElement;
+    var list=enrich();
+    if(view.type==='market'){var it=list.filter(function(x){return x.id===view.id})[0];if(!it)return;view.sig=it.angka4d+it.rt.key;$('sheet').innerHTML=marketModal(it)}
+    else $('sheet').innerHTML=scheduleModal(list);
+    $('modal').classList.add('open');$('modal').setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');
+    var x=$('sheet').querySelector('[data-close]');if(x)x.focus();
+  }
+  function closeModal(){
+    st.modal=null;$('modal').classList.remove('open');$('modal').setAttribute('aria-hidden','true');document.body.classList.remove('no-scroll');
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  function patchModal(list){
+    if(!st.modal||st.modal.type!=='market')return;
+    var it=list.filter(function(x){return x.id===st.modal.id})[0];if(!it)return;
+    if(it.angka4d+it.rt.key!==st.modal.sig){st.modal.sig=it.angka4d+it.rt.key;var top=$('sheet').scrollTop;$('sheet').innerHTML=marketModal(it);$('sheet').scrollTop=top;return}
+    setT($('sheet'),'[data-m=cd]',fmtCd(it.rt.cd));setT($('sheet'),'[data-m=phase]',it.rt.phase);
+  }
+
+  /* ---------- Copy & toast ---------- */
+  function toast(msg){
+    var t=document.createElement('div');t.className='toast';t.innerHTML='<i class="fa-solid fa-circle-check"></i>'+esc(msg);
+    $('toasts').appendChild(t);setTimeout(function(){t.remove()},2400);
+  }
+  function copy(id){
+    var i=enrich().filter(function(x){return x.id===id})[0];if(!i)return;
+    var txt=['PREDIKSI '+i.name+' — WADAH4D',fmtDate.format(new Date()),'','4D : '+i.angka4d,'3D : '+i.angka3d,'2D : '+i.angka2d,'Angka Main : '+i.mainDigits.join(' '),'BBFS : '+i.bbfs.join(' '),'Colok Bebas : '+i.colok.join(' • '),'Shio : '+i.shio,'Top 2D : '+i.top2d.join(' '),'','Daftar & main di '+LINK].join('\n');
+    var done=function(){toast('Prediksi '+i.name+' disalin')};
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(done,fallback)}else fallback();
+    function fallback(){var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){toast('Gagal menyalin')}ta.remove()}
+  }
+
+  /* ---------- Slider ---------- */
+  var slideIdx=0,slideCount=$('slides').children.length,slideTimer=0;
+  $('dots').innerHTML=Array.from({length:slideCount}).map(function(_,k){return '<button aria-label="Slide '+(k+1)+'" data-dot="'+k+'"></button>'}).join('');
+  function goSlide(k){slideIdx=(k+slideCount)%slideCount;$('slides').style.transform='translateX(-'+slideIdx*100+'%)';Array.prototype.forEach.call($('dots').children,function(d,j){d.classList.toggle('on',j===slideIdx)})}
+  function autoSlide(){clearInterval(slideTimer);slideTimer=setInterval(function(){goSlide(slideIdx+1)},5000)}
+  goSlide(0);autoSlide();
+  var sx=null;
+  $('slider').addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  $('slider').addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){goSlide(slideIdx+(dx<0?1:-1));autoSlide()}sx=null});
+  $('dots').addEventListener('click',function(e){var b=e.target.closest('[data-dot]');if(b){goSlide(+b.dataset.dot);autoSlide()}});
+
+  /* ---------- Events ---------- */
+  document.addEventListener('click',function(e){
+    var o=e.target.closest('[data-open]');if(o){openModal({type:'market',id:o.dataset.open});return}
+    var c=e.target.closest('[data-copy]');if(c){copy(c.dataset.copy);return}
+    if(e.target.closest('[data-close]')||e.target===$('modal')){closeModal();return}
+    var a=e.target.closest('#mobile-nav a');if(a){toggleMenu(false)}
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&st.modal)closeModal();
+    if(e.key==='Tab'&&st.modal){var f=$('sheet').querySelectorAll('a[href],button');if(!f.length)return;var first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+  });
+  $('open-schedule').addEventListener('click',function(){openModal({type:'schedule'})});
+  $('foot-schedule').addEventListener('click',function(e){e.preventDefault();openModal({type:'schedule'})});
+  $('spot-detail').addEventListener('click',function(){if(st.spotId)openModal({type:'market',id:st.spotId})});
+  function toggleMenu(force){var n=$('mobile-nav'),open=typeof force==='boolean'?force:!n.classList.contains('open');n.classList.toggle('open',open);$('menu-btn').setAttribute('aria-expanded',String(open));$('menu-btn').innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'}
+  $('menu-btn').addEventListener('click',function(){toggleMenu()});
+  var deb=0;
+  $('search').addEventListener('input',function(e){clearTimeout(deb);deb=setTimeout(function(){st.q=e.target.value;tick()},120)});
+  $('seg').addEventListener('click',function(e){
+    var b=e.target.closest('[data-f]');if(!b)return;st.f=b.dataset.f;syncSeg();
+    try{localStorage.setItem('wadah4d-prefs',JSON.stringify({f:st.f}))}catch(_){}
+    tick();
+  });
+  function syncSeg(){Array.prototype.forEach.call($('seg').children,function(b){var on=b.dataset.f===st.f;b.classList.toggle('on',on);b.setAttribute('aria-selected',String(on))})}
+
+  /* ---------- Loop ---------- */
+  function tick(){
+    var list=enrich();
+    $('date-label').textContent=fmtDate.format(new Date())+' • WIB';
+    var rk=Object.keys(RESULTS);if(rk.length){var rr=RESULTS[rk[Math.floor(Date.now()/4000)%rk.length]];$('today-text').textContent='Result '+rr.name+' • '+rr.result+' • '+rr.date;}else{$('today-text').textContent='Memuat result terbaru…';}
+    renderCounts(list);renderSpot(list);renderTimeline(list);renderGrid(list);renderTicker(list);patchModal(list);
+  }
+  $('year').textContent=new Date().getFullYear();
+  syncSeg();tick();
+  setInterval(function(){if(!document.hidden)tick()},1000);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)tick()});
+})();
+</script>
+
+<aside
+	id="lovable-badge"
+	role="complementary"
+	dir="ltr"
+	lang="en"
+	aria-label="Edit with Lovable">
+	<a
+		id="lovable-badge-cta" 
+		target="_blank" 
+		href="https://lovable.dev/projects/lovp_575nafv4va957vf0gcqskw48xw?utm_source=lovable-badge"
+		rel="noopener nofollow"
+		aria-label="Edit with Lovable">
+		<span id="lovable-badge-text">Edit with</span>
+		<span id="lovable-badge-logo"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
+  <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"/>
+  <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"/>
+  <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"/>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
+      <stop offset=".106" stop-color="#FE7B02"/>
+      <stop offset=".394" stop-color="#FE3F21"/>
+      <stop offset=".608" stop-color="#F858BC"/>
+      <stop offset=".929" stop-color="#575ECF"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+</span>
+	</a>
+	
+	<span id="lovable-badge-divider" aria-hidden="true"></span>
+	
+	<button 
+		id="lovable-badge-close"
+		aria-label="Dismiss"
+		title="Dismiss"
+		type="button">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+			<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"/>
+		</svg>
+	</button>
+</aside>
+<script>
+	(() => {
+		if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
+			const badge = document.querySelector('#lovable-badge');
+			if (badge) {
+				badge.style.display = 'none';
+			}
+			return;
+		}
+
+		const closeButton = document.querySelector('#lovable-badge-close');
+		if (closeButton) {
+			closeButton.addEventListener('click', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				const badge = document.querySelector('#lovable-badge');
+				if (badge) {
+					badge.classList.add('closing');
+					setTimeout(function() {
+						if (badge) {
+							badge.style.display = 'none';
+						}
+					}, 240);
+				}
+			});
+		}
+	})();
+</script>
+<script src="https://cdn.gpteng.co/lovable.js" type="module"></script></body>
+</html>
