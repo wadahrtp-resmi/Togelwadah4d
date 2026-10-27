@@ -194,6 +194,11 @@ img{max-width:100%;display:block}
 .card-name{font-weight:800;font-size:1.08rem;letter-spacing:-.01em}
 .card-sub{font-size:.78rem;color:var(--muted);font-weight:600}
 .card-main{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px;border-radius:16px;background:var(--grad-soft);border:1px solid var(--sky-100)}
+.actual-result{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid #b8e8d5;border-radius:14px;background:#f0fdf7}
+.actual-result .ar-label{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#047857}
+.actual-result .ar-date{display:block;font-size:.72rem;color:#648477;margin-top:2px}
+.actual-result .ar-number{font-family:var(--mono);font-weight:800;font-size:1.35rem;letter-spacing:.12em;color:#047857}
+.actual-result .ar-empty{font-size:.9rem;color:var(--muted);font-weight:700}
 .d4{display:flex;gap:6px}
 .d4 span{width:40px;height:48px;border-radius:12px;background:#fff;border:1px solid var(--line-2);font-family:var(--mono);font-weight:800;font-size:1.45rem;display:grid;place-items:center;color:var(--sky-700)}
 .cd{text-align:right}
@@ -488,8 +493,39 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
 (function(){
   'use strict';
   var LINK = 'https://wadahbesar.com/';
-  var RESULTS = window.__RESULTS__||{};
-  function loadResults(){fetch('/api/results').then(function(r){return r.json()}).then(function(d){if(d&&d.results){RESULTS=d.results}}).catch(function(){})}
+  var RESULTS = normalizeResults(window.__RESULTS__||{});
+  function normalizeResults(data){
+    var source=data&&data.results!=null?data.results:(data&&data.data&&data.data.results!=null?data.data.results:data);
+    var out={};
+    if(Array.isArray(source)){
+      source.forEach(function(row){
+        if(!row)return;
+        var name=String(row.name||row.pasaran||row.market||row.id||'').trim().toUpperCase();
+        var value=row.result!=null?row.result:(row.angka!=null?row.angka:row.keluaran);
+        if(name&&value!=null)out[name]={name:name,result:String(value),date:String(row.date||row.tanggal||row.updated_at||'')};
+      });
+    }else if(source&&typeof source==='object'){
+      Object.keys(source).forEach(function(key){
+        var row=source[key],name=String((row&&(row.name||row.pasaran||row.market))||key).trim().toUpperCase();
+        if(row&&typeof row==='object'){
+          var value=row.result!=null?row.result:(row.angka!=null?row.angka:row.keluaran);
+          if(value!=null)out[name]={name:name,result:String(value),date:String(row.date||row.tanggal||row.updated_at||'')};
+        }else if(row!=null){out[name]={name:name,result:String(row),date:''};}
+      });
+    }
+    return out;
+  }
+  function getActualResult(market){
+    return RESULTS[String(market.name||'').toUpperCase()] ||
+      RESULTS[String(market.id||'').toUpperCase()] ||
+      RESULTS[String(market.code||'').toUpperCase()] || null;
+  }
+  function loadResults(){
+    fetch('/api/results',{cache:'no-store',headers:{'Accept':'application/json'}})
+      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+      .then(function(d){var fresh=normalizeResults(d);if(Object.keys(fresh).length){RESULTS=fresh;tick();}})
+      .catch(function(){/* Tetap gunakan data terakhir bila API sementara tidak dapat diakses. */});
+  }
   loadResults();setInterval(loadResults,60000);
 
   var MARKETS = [
@@ -583,11 +619,14 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
   }
 
   function cardHTML(i){
+    var actual=getActualResult(i);
+    var resultHTML='<div class="actual-result" data-r="actual-result"><div><div class="ar-label">Result Terbaru</div><small class="ar-date" data-r="actual-date">'+(actual&&actual.date?esc(actual.date):'Menunggu pembaruan')+'</small></div>'+(actual?'<strong class="ar-number" data-r="actual-number">'+esc(actual.result)+'</strong>':'<span class="ar-empty" data-r="actual-number">Belum tersedia</span>')+'</div>';
     return '<article class="card" data-id="'+i.id+'">'+
       '<div class="card-head"><div class="card-id"><span class="badge-code">'+esc(i.code)+'</span><div><div class="card-name">'+esc(i.name)+'</div><div class="card-sub" data-r="meta">'+esc(i.rt.meta)+'</div></div></div>'+
       '<span class="pill '+PILL[i.rt.key]+'" data-r="pill">'+esc(i.rt.status)+'</span></div>'+
       '<div class="card-main"><div class="d4" data-r="d4">'+i.mainDigits.map(function(d){return '<span>'+d+'</span>'}).join('')+'</div>'+
       '<div class="cd"><div class="v mono" data-r="cd">'+fmtCd(i.rt.cd)+'</div><div class="l" data-r="phase">'+esc(i.rt.phase)+'</div></div></div>'+
+      resultHTML+
       '<div class="facts"><div class="fact"><small>3D</small><b data-r="3d">'+i.angka3d+'</b></div><div class="fact"><small>2D</small><b data-r="2d">'+i.angka2d+'</b></div><div class="fact"><small>BBFS</small><b data-r="bbfs">'+i.bbfs.join('')+'</b></div><div class="fact"><small>Shio</small><b data-r="shio" style="font-size:.78rem">'+i.shio+'</b></div></div>'+
       '<div class="card-foot"><button class="btn btn-primary" data-open="'+i.id+'">Lihat Detail</button><button class="icon-btn" data-copy="'+i.id+'" aria-label="Salin prediksi '+esc(i.name)+'"><i class="fa-regular fa-copy"></i></button><a class="icon-btn" href="'+LINK+'" target="_blank" rel="noopener" aria-label="Pasang di Wadah4D"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>'+
     '</article>';
@@ -596,12 +635,18 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
 
   function renderGrid(list){
     var g=$('grid'),items=filtered(list);
-    var sig=st.f+'|'+st.q+'|'+items.map(function(i){return i.id+i.angka4d+i.rt.key}).join(',');
+    var sig=st.f+'|'+st.q+'|'+items.map(function(i){var r=getActualResult(i);return i.id+i.angka4d+i.rt.key+(r?r.result+'@'+r.date:'no-result')}).join(',');
     if(sig!==st.sig){
       st.sig=sig;
       g.innerHTML=items.length?items.map(cardHTML).join(''):'<div class="empty"><i class="fa-solid fa-magnifying-glass"></i><div><b>Pasaran tidak ditemukan</b></div><div>Coba kata kunci atau filter lain.</div></div>';
     }else{
-      items.forEach(function(i){var c=g.querySelector('[data-id="'+i.id+'"]');if(!c)return;setT(c,'[data-r=cd]',fmtCd(i.rt.cd));setT(c,'[data-r=phase]',i.rt.phase);setT(c,'[data-r=meta]',i.rt.meta)});
+      items.forEach(function(i){
+        var c=g.querySelector('[data-id="'+i.id+'"]');if(!c)return;
+        setT(c,'[data-r=cd]',fmtCd(i.rt.cd));setT(c,'[data-r=phase]',i.rt.phase);setT(c,'[data-r=meta]',i.rt.meta);
+        var r=getActualResult(i);
+        setT(c,'[data-r=actual-number]',r?r.result:'Belum tersedia');
+        setT(c,'[data-r=actual-date]',r&&r.date?r.date:'Menunggu pembaruan');
+      });
     }
   }
 
@@ -641,7 +686,7 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
   }
 
   function renderTicker(list){
-    var parts=list.map(function(i){return (function(){var r=RESULTS[i.name];return '<span><i class="fa-solid fa-circle"></i>'+esc(i.name)+' • RESULT '+(r?esc(r.result)+' • '+esc(r.date):'----')+'</span>'})()});
+    var parts=list.map(function(i){return (function(){var r=getActualResult(i);return '<span><i class="fa-solid fa-circle"></i>'+esc(i.name)+' • RESULT '+(r?esc(r.result)+(r.date?' • '+esc(r.date):''):'----')+'</span>'})()});
     parts.push('<span><i class="fa-solid fa-star"></i>Result otomatis diperbarui langsung dari pasaran resmi</span>');
     var html=parts.join('')+parts.join('');
     var t=$('ticker');if(t.innerHTML!==html)t.innerHTML=html;
@@ -652,6 +697,8 @@ footer{margin-top:60px;background:#fff;border-top:1px solid var(--line);padding:
     var rows='<div class="row"><span>Tutup</span><b>'+esc(i.rt.closeText)+'</b></div><div class="row"><span>Diundi</span><b>'+esc(i.rt.drawText)+'</b></div><div class="row"><span>Hari Buka</span><b>'+esc(i.openDays)+'</b></div>';
     if(i.closedDays)rows+='<div class="row"><span>Hari Libur</span><b>'+esc(i.closedDays)+'</b></div>';
     if(i.openHours)rows+='<div class="row"><span>Jam Sesi</span><b>'+esc(i.openHours.join(' • '))+'</b></div>';
+    var actual=getActualResult(i);
+    rows+='<div class="row"><span>Result Terbaru</span><b>'+(actual?esc(actual.result)+(actual.date?' • '+esc(actual.date):''):'Belum tersedia')+'</b></div>';
     rows+='<div class="row"><span>Website</span><a href="'+esc(i.website)+'" target="_blank" rel="noopener">'+esc(i.website.replace(/^https?:\/\//,''))+'</a></div>';
     return '<div class="sheet-head"><div><h3 id="modal-title">'+esc(i.name)+'</h3><small>'+esc(i.code)+' • <span data-m="phase">'+esc(i.rt.phase)+'</span> <span class="mono" data-m="cd">'+fmtCd(i.rt.cd)+'</span></small></div><button class="x" data-close aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button></div>'+
     '<div class="sheet-body">'+
